@@ -18,3 +18,4 @@ interested in contributing [click here](https://github.com/DataScienceSpecializa
 
 [link 2 z1.html](z1.html)
 
+[link 2 s2/z11.html](/s2/z11.html)
