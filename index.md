@@ -2,4 +2,4 @@
 
 Hello, students!
 
-[/s2/lec2/] Link to another
+1. [Link to another](/s2/lec2/)
