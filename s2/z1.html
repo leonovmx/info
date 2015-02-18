@@ -205,31 +205,23 @@ summary(cr)</code></pre>
 <h1>Статистики, необходимые для выводы в функции getmonitor()</h1>
 <ol style="list-style-type: decimal">
 <li>Среднее. Вычисляется как арифметическое среднее</li>
-<li>Медиана.</li>
-</ol>
+<li>Медиана.
 <ul>
 <li>Вычисляется как серединный элемент в отсортированном массиве.</li>
-</ul>
-<ol start="3" style="list-style-type: decimal">
-<li>Дисперсия, среднеквадратичное отклонение</li>
-</ol>
+</ul></li>
+<li>Дисперсия, среднеквадратичное отклонение
 <ul>
-<li>дисперсия <span class="math">\[D(x) = \Sigma_{i=1}^n\frac{(x_i - x)^2}{(n-1)}\]</span></li>
-<li>среднекваратичное отклонение <span class="math">\[\sigma(x) = \sqrt{\Sigma_{i=1}^n\frac{(x_i - x)^2}{(n-1)}}\]</span></li>
-</ul>
-<ol start="4" style="list-style-type: decimal">
-<li>Второй квартиль</li>
-</ol>
+<li>дисперсия <span class="math">\(D(x) = \Sigma_{i=1}^n\frac{(x_i - x)^2}{(n-1)}\)</span></li>
+<li>среднекваратичное отклонение <span class="math">\(\sigma(x) = \sqrt{\Sigma_{i=1}^n\frac{(x_i - x)^2}{(n-1)}}\)</span></li>
+</ul></li>
+<li>Второй квартиль
 <ul>
 <li>вычисляется как медиана на интревале до медианы из п. 2</li>
-</ul>
-<ol start="5" style="list-style-type: decimal">
-<li>Третий квартиль</li>
-</ol>
+</ul></li>
+<li>Третий квартиль
 <ul>
 <li>вычисляется как медиана на интревале после медианы из п. 2</li>
-</ul>
-<ol start="6" style="list-style-type: decimal">
+</ul></li>
 <li>Минимум</li>
 <li>Максимум</li>
 <li>Количество наблюдений, количество NA.</li>
