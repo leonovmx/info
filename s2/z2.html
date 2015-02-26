@@ -72,6 +72,16 @@ img {
 </ul>
 </div>
 
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><em><a href="index.html">Главная</a> — <a href="s2/index/html">Семестр 2</a></em></td>
+</tr>
+<tr class="even">
+<td align="left"><em>Обновлено: 27 февраля 2015</em></td>
+</tr>
+</tbody>
+</table>
 <div id="-" class="section level1">
 <h1>Определить матрицы</h1>
 <p>Написать функцию, которая вычисляет определитель матрицы <code>n*n</code>. Программа должна состоять их двух функций:</p>
@@ -81,21 +91,21 @@ img {
 <pre class="r"><code>x &lt;- matrix(sample(x = 1:100, size = 16, replace = T), ncol = 4, nrow = 4)
 x</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]    2   90   88   47
-## [2,]   24   94   28   40
-## [3,]   74   88    3   14
-## [4,]   23   22   26   23</code></pre>
+## [1,]   90   44   32   74
+## [2,]    4   91   56    5
+## [3,]   41   30   92   95
+## [4,]   47   67   39   52</code></pre>
 <pre class="r"><code>x[-3,-2]</code></pre>
 <pre><code>##      [,1] [,2] [,3]
-## [1,]    2   88   47
-## [2,]   24   28   40
-## [3,]   23   26   23</code></pre>
+## [1,]   90   32   74
+## [2,]    4   56    5
+## [3,]   47   39   52</code></pre>
 <p>Но можно использовать в качестве проверки.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Функция, которая считает определить по определнию. Можно использовать функцию 1. Для проверки можно использовать стандартную функцию.</li>
 </ol>
 <pre class="r"><code>det(x)</code></pre>
-<pre><code>## [1] -5511974</code></pre>
+<pre><code>## [1] 9448116</code></pre>
 </div>
 
 
