@@ -12,6 +12,10 @@ output: html_document
     - [Задача 1](s2/z1.html)
     - [Задача 2](s2/z2.html)
 
+Прочая информация:
+
+- [новая бально-рейтинговая система](rating.md)
+
 Список литературы:
 
 1. [EN] "R in Action, Second Edition. Data analysis and graphics with R", Robert Kabacofа
