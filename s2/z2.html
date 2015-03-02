@@ -69,6 +69,7 @@ img {
 <div id="TOC">
 <ul>
 <li><a href="#-">Определить матрицы</a></li>
+<li><a>Интересное</a></li>
 </ul>
 </div>
 
@@ -78,7 +79,7 @@ img {
 <td align="left"><em><a href="http://leonovmx.github.io/info/index.html">Главная</a> — <a href="./index/html">Семестр 2</a></em></td>
 </tr>
 <tr class="even">
-<td align="left"><em>Обновлено: 27 февраля 2015</em></td>
+<td align="left"><em>Обновлено: 02 марта 2015</em></td>
 </tr>
 </tbody>
 </table>
@@ -91,21 +92,25 @@ img {
 <pre class="r"><code>x &lt;- matrix(sample(x = 1:100, size = 16, replace = T), ncol = 4, nrow = 4)
 x</code></pre>
 <pre><code>##      [,1] [,2] [,3] [,4]
-## [1,]   29   23   52   96
-## [2,]   96   98  100   16
-## [3,]   67   10   63   86
-## [4,]   89   33   13   54</code></pre>
+## [1,]   84   72   50   85
+## [2,]   98   67   32   28
+## [3,]   18   99   86   18
+## [4,]   31   91   97   21</code></pre>
 <pre class="r"><code>x[-3,-2]</code></pre>
 <pre><code>##      [,1] [,2] [,3]
-## [1,]   29   52   96
-## [2,]   96  100   16
-## [3,]   89   13   54</code></pre>
+## [1,]   84   50   85
+## [2,]   98   32   28
+## [3,]   31   97   21</code></pre>
 <p>Но можно использовать в качестве проверки.</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Функция, которая считает определить по определнию. Можно использовать функцию 1. Для проверки можно использовать стандартную функцию.</li>
 </ol>
 <pre class="r"><code>det(x)</code></pre>
-<pre><code>## [1] -29413024</code></pre>
+<pre><code>## [1] -11040574</code></pre>
+</div>
+<div class="section level1">
+<h1>Интересное</h1>
+<p><a href="http://postnauka.ru/video/42416">Математик Иван Оселедец об умножении матрицы на вектор, быстрых алгоритмах и сингулярном разложении</a></p>
 </div>
 
 
