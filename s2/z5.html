@@ -143,11 +143,12 @@ $(document).ready(function () {
 <li>как центр графа</li>
 </ul></li>
 </ol>
+<p><a href="https://github.com/leonovmx/info/blob/gh-pages/s2/shatl_graph.RData?raw=true">Данные:</a></p>
 </div>
 <div class="section level1">
 <h1>Теория</h1>
 <p>В основе поиска кратчайшего пути лежит алгоритм Дейкстры. Веса в графе положительные должны быть. Задача является NP задачей.</p>
-<p>основное действие: Если текущее расстояние от вершины <code>i</code> до вершины <code>j</code> больше, чем расстояние от вершины <code>i</code> до <code>k</code> + от <code>k</code> до <code>j</code>, то</p>
+<p>основное действие: Если текущее расстояние от вершины <code>i</code> до вершины <code>j</code> больше, чем расстояние от вершины <code>i</code> до <code>k</code> + от <code>k</code> до <code>j</code>, то запоминаем новые данные (расстояние и вершину из которой пришли).</p>
 </div>
 
 
