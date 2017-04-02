@@ -222,7 +222,7 @@ div.tocify {
 
 
 <p><em><a href="http://leonovmx.github.io/info/index.html">Главная</a> — <a href="./index.html">Семестр 2</a></em></p>
-<p><em>Обновлено: 19 марта 2017 23:03</em></p>
+<p><em>Обновлено: 02 апреля 2017 13:04</em></p>
 <div id="--" class="section level1">
 <h1>Алгоритм Дейкстры (АД)</h1>
 <p>АД — это алгоритм поиска кратчайшего пути в графе.</p>
@@ -238,6 +238,21 @@ div.tocify {
 <p>Данные: <a href="https://github.com/leonovmx/info/raw/gh-pages/s2/data_ex_rate.zip" class="uri">https://github.com/leonovmx/info/raw/gh-pages/s2/data_ex_rate.zip</a></p>
 <div id="---" class="section level2">
 <h2>На российском межбанковском рынке</h2>
+<p>Данные по MosPrime. Источники:</p>
+<ol style="list-style-type: decimal">
+<li><a href="http://www.mosprime.com/">Официальный сайт</a></li>
+<li><a href="http://www.cbr.ru/hd_base/default.aspx?prtid=mosprime">ЦБ</a></li>
+<li><a href="https://ru.wikipedia.org/wiki/MosPrime_Rate">Вики</a></li>
+</ol>
+<p>Данные:</p>
+<p><a href="https://github.com/leonovmx/info/raw/gh-pages/s2/mosprime.csv" class="uri">https://github.com/leonovmx/info/raw/gh-pages/s2/mosprime.csv</a></p>
+<p>Прямо с сайта можно загрузить данные при помощи команды</p>
+<pre class="r"><code>read.csv(
+    file = &quot;https://github.com/leonovmx/info/raw/gh-pages/s2/mosprime.csv&quot;,
+    header = T, 
+    sep = &quot;;&quot;, 
+    dec = &quot;,&quot;, 
+    stringsAsFactors = F)</code></pre>
 <pre><code>##       Дата X1.день X1.нед. X2.нед. X1.мес. X2.мес. X3.мес. X6.мес.  X
 ## 1 30.12.16   10,37   10,38   10,41   10,43   10,49   10,49   10,49 NA
 ## 2 29.12.16   10,37    10,4   10,43   10,44    10,5    10,5   10,49 NA
@@ -245,7 +260,8 @@ div.tocify {
 ## 4 27.12.16   10,35    10,4   10,43   10,49   10,57   10,57   10,53 NA
 ## 5 26.12.16   10,34   10,41   10,43   10,48   10,56   10,56   10,52 NA
 ## 6 23.12.16   10,32    10,4   10,43   10,44   10,48   10,49   10,49 NA</code></pre>
-<p>После загрузки удалите ненужные столбцы, преобразуйте даты в соответствующий тип.</p>
+<p>Внимательно просмотрите файл. Посмотрите его структуру, какого типа столбцы? Может стоит обратитьв нимание на параметр <code>colClasses</code> в функции <code>read.csv</code></p>
+<p>После загрузки удалите ненужные столбцы, преобразуйте даты и всё что надо в соответствующий тип.</p>
 </div>
 <div id="libor" class="section level2">
 <h2>Libor</h2>

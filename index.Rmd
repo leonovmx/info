@@ -30,6 +30,18 @@ output: html_document
 3. [Google's R Style Guide](http://google-styleguide.googlecode.com/svn/trunk/Rguide.xml#assignment) - как оформлять код для читабельности.
 4. [R-bloggers](http://www.r-bloggers.com) - блог по программированию в R.
 
+Тут я буду что-то коллекционировать для себя по `Rmd`: [leonovmx.github.io/info/for_rmd.html](for_rmd.html)
+
+
+Соответственно примеры `Rmd` можно найти в самом депозитарии.
+Если у вас есть что-то крутое и интересное - шлите, добавлю.
+Нужно как минимум:
+
+1) инструкция по md
+2) инструкция по rmd
+
+
+
 ---
 
 Если найдёте ошибку, неточность, неработающую ссылку, материал, 
