@@ -41,6 +41,11 @@ output: html_document
 2) инструкция по rmd
 
 
+# Занятия по статистике
+
+https://yadi.sk/d/Q9SBpTAr3RP5wj
+
+
 
 ---
 
