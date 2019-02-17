@@ -1,9 +1,16 @@
-# Рисование графиков. Базовое
-LM  
- февраля 2015 г.  
+---
+title: "Рисование графиков. Базовое"
+author: "LM"
+date: "2019"
+output: 
+  html_document:
+    toc: true
+    number_sections: false
+    keep_md: true
+---
 ----------------------
 *[Главная](http://leonovmx.github.io/info/index.html) --- [Семестр 2](./index/html)*
-*Обновлено: 05 апреля 2016*
+*Обновлено: 18 February 2019*
 ----------------------
 
 # Графики
@@ -22,7 +29,7 @@ LM
 plot(x = n, y = d)
 ```
 
-![](class1_files/figure-html/unnamed-chunk-2-1.png) 
+![](class1_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
 
 ## Различные типы
 
@@ -35,25 +42,25 @@ plot(x = n, y = d)
 plot(x = n, y = d, type = "l", main = "Type: l")
 ```
 
-![](class1_files/figure-html/unnamed-chunk-3-1.png) 
+![](class1_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ```r
 plot(x = n, y = d, type = "b", main = "Type: b")
 ```
 
-![](class1_files/figure-html/unnamed-chunk-3-2.png) 
+![](class1_files/figure-html/unnamed-chunk-3-2.png)<!-- -->
 
 ```r
 plot(x = n, y = d, type = "s", main = "Type: s")
 ```
 
-![](class1_files/figure-html/unnamed-chunk-3-3.png) 
+![](class1_files/figure-html/unnamed-chunk-3-3.png)<!-- -->
 
 ```r
 plot(x = n, y = d, type = "S", main = "Type: S")
 ```
 
-![](class1_files/figure-html/unnamed-chunk-3-4.png) 
+![](class1_files/figure-html/unnamed-chunk-3-4.png)<!-- -->
 
 ## Добавляем подписи
 ### Название графика
@@ -66,7 +73,7 @@ plot(x = n, y = d, type = "S", main = "Type: S")
 plot(x = n, y = d, type = "l", main = "Название графика")
 ```
 
-![](class1_files/figure-html/unnamed-chunk-4-1.png) 
+![](class1_files/figure-html/unnamed-chunk-4-1.png)<!-- -->
 
 
 ```r
@@ -74,7 +81,7 @@ plot(x = n, y = d, type = "l", main = "")
 title(main = "Название графика")
 ```
 
-![](class1_files/figure-html/unnamed-chunk-5-1.png) 
+![](class1_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
 
 ### Название осей
 
@@ -83,7 +90,7 @@ title(main = "Название графика")
 plot(x = n, y = d, type = "l", main = "Название графика", xlab = "Подпись на оси Х", ylab = "Подпись на оси Y")
 ```
 
-![](class1_files/figure-html/unnamed-chunk-6-1.png) 
+![](class1_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
 
 
 ```r
@@ -93,4 +100,4 @@ title(main = "название графика",
     ylab = "Подпись на оси Y")
 ```
 
-![](class1_files/figure-html/unnamed-chunk-7-1.png) 
+![](class1_files/figure-html/unnamed-chunk-7-1.png)<!-- -->

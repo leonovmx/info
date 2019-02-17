@@ -1,10 +1,17 @@
-# Задача 6. Шатлы
-LM  
- февраля 2015 г.  
+---
+title: "Задача 6. Шатлы"
+author: "LM"
+date: " февраля 2019 г."
+output: 
+  html_document:
+    toc: true
+    number_sections: false
+    keep_md: true
+---
 ----------------------
 *[Главная](http://leonovmx.github.io/info/index.html) --- [Семестр 2](./index.html)*
 
-*Обновлено: 24 апреля 2017 02:04*
+*Обновлено: 18 February 2019 01:02*
 
 # Теория
     

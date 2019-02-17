@@ -1,9 +1,16 @@
-# Информатика/Семестр 1
-LM  
-18 февраля 2015 г.  
+---
+title: "Информатика/Семестр 1"
+author: "LM"
+date: "18 февраля 2019 г."
+output: 
+  html_document:
+    toc: true
+    number_sections: false
+    keep_md: true
+---
 ----------------------
 *[Главная](http://leonovmx.github.io/info/index.html)*
-*Обновлено: 12 августа 2015*
+*Обновлено: 18 February 2019*
 ----------------------
 
 # Основное
