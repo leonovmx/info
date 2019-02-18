@@ -1,7 +1,7 @@
 ---
 title: "Информатика/Семестр 1"
 author: "LM"
-date: "18 февраля 2015 г."
+date: "18 февраля 2019 г."
 output: 
   html_document:
     toc: true
