@@ -289,7 +289,7 @@ div.tocify {
 
 
 <p><em><a href="http://leonovmx.github.io/info/index.html">Главная</a> — <a href="./index.html">Семестр 2</a></em></p>
-<p><em>Обновлено: 20 February 2019 17:02</em></p>
+<p><em>Обновлено: 21 February 2019 16:02</em></p>
 <div class="section level1">
 <h1>Описание</h1>
 <p>Необходимо загрузить данные, обработать, нарисовать красивые картинки и сделать подписи. Существует две таблицы с данными по usd и ценами на brent.</p>
@@ -529,6 +529,40 @@ d = \frac{brent_i - brent_{i-1}}{brent_{i-1}}
 </div>
 <div class="section level1">
 <h1>Дополнительно</h1>
+<div id="merge" class="section level2">
+<h2>merge</h2>
+<p>Есть стандартная функция для объядинения 2х бд <code>merge</code></p>
+<pre><code>merge(
+  x, # таблица 1
+  y, # таблица 2
+  by = intersect(names(x), names(y)), # указываются имена столбцов, по которым будет производится объединение
+  by.x = by, by.y = by, # используются, если столбцы называются не одинаково в разных таблицах
+  all = FALSE, all.x = all, all.y = all) # используются, чтобы оставить все элементы из двух таблиц, все элементы пересечения и элементы х и тд 
+  </code></pre>
+</div>
+<div id="reshape2" class="section level2">
+<h2>reshape2</h2>
+<p><code>reshape2</code> - пакет, который позволяет очень быстро и просто делать агрегирование. В основе 2 главные функции:</p>
+<ul>
+<li>melt - представляет таблицу в формате id, название переменной и значение переменной</li>
+<li>dcast - делает из melt таблицы агрегированную</li>
+</ul>
+<pre><code>melt{
+  data, # - имя таблицы, переменная
+  id.vars, # имена столбцов, которые идентифицируют строчку, например c(&quot;country&quot;,&quot;year&quot;)
+  measure.vars, # название перемнных, которые хочется агрегировать, например c(&quot;gdp&quot;, &quot;investment&quot;)
+}</code></pre>
+<pre><code>dcast(
+  data, # melt таблица
+  formula, # формула в виде country ~ variable, где country - будет id столбец таблицы и для каждого значения country будет посчитано значение переменных
+  fun.aggregate = mean # функция агрегирования, mean, sum, sd, length и тд
+)
+</code></pre>
+</div>
+<div id="lubridate" class="section level2">
+<h2>lubridate</h2>
+<p><code>lubridate</code> - пакет, где есть такие полезные функции как <code>month</code>, <code>year</code>, <code>wday</code></p>
+</div>
 </div>
 
 
