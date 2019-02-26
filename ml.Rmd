@@ -14,6 +14,12 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# GitHub
+
+rmd file is here:
+https://github.com/leonovmx/info/blob/gh-pages/ml.Rmd
+
+
 # Downloading
 
 After download, we look at dimensions, look at all variables. 
@@ -113,10 +119,10 @@ fitControl <- trainControl(
   repeats = 10)
 
 
-modelRF <- 
+modelRF <-
   train(
-    method = "rf", 
-    x = train_main[,-53], 
+    method = "rf",
+    x = train_main[,-53],
     trControl = fitControl,
     y = train_main$classe)
 
