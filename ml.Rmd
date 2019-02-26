@@ -1,0 +1,162 @@
+---
+title: "Practical Machine Learning"
+author: "Maxim Leonov"
+date: "26-02-2019"
+output: 
+  html_document:
+    toc: true
+    number_sections: false
+    keep_md: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# GitHub
+
+rmd file is here:
+https://github.com/leonovmx/info/blob/gh-pages/ml.Rmd
+
+
+# Downloading
+
+After download, we look at dimensions, look at all variables. 
+Check, that all variables have correct types. Convert all vars from 7 to 159 to
+numeric type.
+
+```{r, echo=FALSE, warning=FALSE, message=FALSE}
+
+library(dplyr)
+library(caret)
+library(party)
+library(knitr)
+
+
+train <- read.csv(file = "./pml-training.csv", stringsAsFactors = F)
+test <- read.csv(file = "./pml-testing.csv", stringsAsFactors = F)
+
+```
+
+Number of obs is `r nrow(train)`, and there are `r (ncol(train) - 1)` variables.
+There are 5 types of activities. Let's check how many obs are in various types.
+
+```{r, echo=FALSE}
+  library(knitr)
+
+  kable(
+    table(
+      train$classe
+    ), caption = "Distribution of obs by classes", col.names = c("Classes", "Freq.")
+  )
+  
+
+
+# save.image("model1.RData")  
+load(file = "model1.RData")
+
+```
+
+All classes have enough obs. 
+
+There are a lot of factors. 
+It will be difficult to fit model.
+
+# NA patterns
+
+Data is collected from various gadgets. We have cheked, is there any pattern with NA.
+We checked if any combination of NAs led to any class.
+
+We found such patterns, but when we applied this findings to out base, we found out
+that we determined class approximately for 120 observations. It was sadly.
+
+# Time patterns
+
+We looked for patterns in time variables separetely for each candidate.
+And there were some.
+
+```{r, echo=FALSE, results='asis'}
+
+# table(train$cvtd_timestamp, train$user_name)
+# adelmo <- train[train$user_name == "adelmo", ]
+# kable(table(adelmo$cvtd_timestamp, adelmo$classe))
+
+for(i in unique(train$user_name)[1:2]) {
+  adelmo <- train[train$user_name == i, ]
+  print(kable(table(adelmo$cvtd_timestamp, adelmo$classe), caption = paste(i)))
+}
+
+```
+
+As we can see from tables above, time isuserful information for futher fitting, 
+but it was decided, it was bad idea to use time for train, especially if 
+we would apply this model in future. These vars were excluded. 
+
+# Model fiting 
+
+Moreover, to reduce size of database we found and exclude variables, that had at least 
+1 `NA`. 
+
+We got `r length(nm)` variables. Here are some of them:  `r head(nm)`. 
+It's still a lot of vars for train.
+For redcution I used `pca`, 
+but because of some warnings about memory insufficientcy I refused to use it. 
+There is no many high correlated vars, and it shouldn't lead to mistakes 
+(I am not going to use regression).
+
+We splitted data into train and test (70% and 30%). 
+For train we used 10-fold Cross-validation.
+
+Model result:
+
+```{r, echo=FALSE, results='hide', message=FALSE, warning=FALSE}
+
+fitControl <- trainControl(
+  method = "repeatedcv",
+  number = 10,
+  ## repeated ten times
+  repeats = 10)
+
+
+modelRF <-
+  train(
+    method = "rf",
+    x = train_main[,-53],
+    trControl = fitControl,
+    y = train_main$classe)
+
+# save.image("model1.RData")
+
+```
+
+```{r, echo=FALSE}
+
+modelRF
+
+```
+
+As we can see Accuracy is very high. I checked the model for train data set. 
+And I built confusion matrix. 
+
+# Test data set
+
+```{r, echo=FALSE}
+train_test_classe <- 
+  predict(modelRF, newdata = train_test)
+t <- table(train_test$classe, 
+      train_test_classe)
+t %>% kable(caption = "Out-of-sample back test (rows are actual, cols are fitted)")
+```
+
+Accuracy is still high: `r round(sum(diag(t)) / nrow(train_test) * 100, 1)`%.
+Model level is very high, accuracy is high. 
+We did't look for other models. 
+
+
+
+
+
+
+
+
