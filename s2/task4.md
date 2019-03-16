@@ -1,9 +1,17 @@
-# Задача 4. Счастливые билетики
-Maxim Leonov  
+---
+title: "Задача 5. Счастливые билетики"
+author: "Maxim Leonov"
+output: 
+  html_document:
+    toc: true
+    number_sections: false
+    keep_md: true
+    toc_float: true
+---
 
 *[Главная](http://leonovmx.github.io/info/index.html) --- [Семестр 2](./index.html)*
 
-*Обновлено: 24 апреля 2017 01:04*
+*Обновлено: 16 March 2019 17:03*
 
 # Задача
 

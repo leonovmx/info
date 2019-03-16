@@ -8,7 +8,7 @@ output:
 
 ----------------------
 *[Главная](http://leonovmx.github.io/info/index.html)*
-*Обновлено: 06 March 2019*
+*Обновлено: 16 March 2019*
 ----------------------
 #Второй семестр
 
@@ -20,6 +20,8 @@ output:
 1. [Система линейных уравнений](task1.html)
 2. [Золотое сечение](z3.html)
 3. [Сокровища](task_treasury.html)
+4. [Хука](task5.html)
+5. [Happy](task4.html)
 
 
 
