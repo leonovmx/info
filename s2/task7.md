@@ -1,7 +1,7 @@
 ---
 title: "Задача 6. Шатлы"
 author: "LM"
-date: "8 апреля 2019"
+date: "2019-04-08"
 output: 
   html_document:
     toc: true
