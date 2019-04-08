@@ -1,7 +1,7 @@
 ---
 title: "Задача 6. Шатлы"
 author: "LM"
-date: "18 февраля 2019 г."
+date: "8 апреля 2019 г."
 output: 
   html_document:
     toc: true
@@ -11,7 +11,7 @@ output:
 ----------------------
 *[Главная](http://leonovmx.github.io/info/index.html) --- [Семестр 2](./index.html)*
 
-*Обновлено: 18 February 2019 01:02*
+*Обновлено: 08 April 2019 08:04*
 
 # Теория
     
